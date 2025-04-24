@@ -58,3 +58,6 @@ if research_node and answer_node and summarizer_node:
             st.rerun()
 else:
     st.warning("Please enter both Tavily and Groq API keys to proceed.")
+
+for key in st.session_state.keys():
+    del st.session_state[key]
