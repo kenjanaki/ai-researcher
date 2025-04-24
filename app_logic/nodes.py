@@ -7,8 +7,8 @@ from .utils import split_thoughts
 
 load_dotenv()
 
-TAVILY_API_KEY = os.getenv("TAVILY_API_KEY") or input("Enter Tavily key: ")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY") or input("Enter Groq key: ")
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY") 
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 search_tool = TavilySearchResults(api_key=TAVILY_API_KEY, max_results=5)
 llm = ChatGroq(api_key=GROQ_API_KEY, model="deepseek-r1-distill-llama-70b")
